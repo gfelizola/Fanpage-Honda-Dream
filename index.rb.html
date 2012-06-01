@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Honda Dream</title>
+	
+	<%= stylesheet_link_tag 'fanpage/fanpage.css' %>
+	<%= stylesheet_link_tag 'fanpage/motos.css' %>
+	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag "jquery.easing.1.3" %>
+	<%= javascript_include_tag "jquery.bxSlider.min" %>
+</head>
+<body>
+	<div id="fb-root">
+	<div id="wrapper" style="width:810px">
+		<div id="content">
+			<div id="header">
+				&nbsp;
+			</div>
+			<div id="video">
+				<iframe width="794" height="490" src="https://www.youtube.com/v/jgfeavVzs0c" frameborder="0" allowfullscreen></iframe>
+			</div>				
+			<div id="disclaimer_top">
+				<img src="<%= image_path('fanpage/img_disclaimer.png') %>"></img>
+			</div>
+			<div id="disclaimer_bottom">
+				<div class="grey_box">
+					<div class="inner">
+						<div>
+							<h2>Honda Dream</h2>
+				            <h3>Muito mais prazer, muito mais emoção.</h3>
+				            <p>Honda Dream é um novo conceito de relacionamento dedicado aos apaixonados pelo fascinante universo das grandes motos.Atendimento especializado, exclusividade, alta tecnologia, conveniência, acessórios, eventos, boutique, serviços especializados e muito mais. Tudo para que você possa realizar os seus sonhos sobre duas rodas.Mais do que oferecer produtos de alta qualidade e performance, queremos compartilhar o prazer e a satisfação de possuir e usufruir de uma moto Honda. Afinal, você não está buscando apenas uma grande motocicleta, mas toda a liberdade e as fantásticas experiências que ela pode lhe proporcionar.</p>
+				            <p>Visite uma de nossas lojas Honda Dream e surpreenda-se.</p>
+				            <p>Bem-vindos ao mundo Honda Dream!<p>
+							<p class="sac">SAC  0800-0552221</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="header_line_up">
+			<label>LINE-UP</label>
+		</div>
+		<div id="line_up">
+			<div class="moto-slider">
+				<div id="motos">
+					<div class="box">
+						<img src="<%= image_path('img_moto_hornet.png') %>" />
+						<div class="title">
+							<label>CB 600F Hornet</label>
+							<div class="link">
+								<a href="https://www.honda.com.br/motos/Paginas/cb-600f-hornet.aspx" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<img src="<%= image_path('img_moto_cbr600.png') %>" />
+						<div class="title">
+							<label>CBR 600RR</label>
+							<div class="link">
+								<a href="https://www4.honda.com.br/cbr2011/" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<img src="<%= image_path('img_moto_cbr1000.png') %>" />
+						<div class="title">
+							<label>CBR 1000RR</label>
+							<div class="link">
+								<a href="https://www4.honda.com.br/cbr2011/" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<img src="<%= image_path('img_moto_vfr.png') %>" />
+						<div class="title">
+							<label>VFR 1200F</label>
+							<div class="link">
+								<a href="https://www2.honda.com.br/VFR1200F/" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<img src="<%= image_path('img_moto_shadow.png') %>" />
+						<div class="title">
+							<label>Shadow 750</label>
+							<div class="link">
+								<a href="https://www2.honda.com.br/shadow750/" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<img src="<%= image_path('img_moto_transalp.png') %>" />
+						<div class="title">
+							<label>XL 700V Transalp</label>
+							<div class="link">
+								<a href="https://www2.honda.com.br/transalp/" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<img src="<%= image_path('img_moto_goldwing.png') %>" />
+						<div class="title">
+							<label>GL 1800 Gold Wing</label>
+							<div class="link">
+								<a href="https://www.honda.com.br/motos/Paginas/gl-1800-gold-wing.aspx" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box_lojas">
+			<a href="javascript:void(0);"><img src="img/box_concessionarias.png" alt="" border="0" /></a>
+		</div>
+		<div id="footer">
+			<div class="logo_footer">
+				&nbsp;
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+		window.fbAsyncInit = function() {
+			FB.init({appId: '266437666723079', status: true, cookie: true, xfbml: true});
+			FB.Canvas.setAutoGrow();
+			FB.Canvas.scrollTo(0,0);
+		};
+		(function() {
+			var e = document.createElement('script'); e.async = true;
+			e.src = "https://connect.facebook.net/en_US/all.js";
+			document.getElementById('fb-root').appendChild(e);
+	    }());
+	
+		$(function(){
+			$('#motos').bxSlider({
+				displaySlideQty: 1,
+				moveSlideQty: 1,
+				pager:true,
+				buildPager: function(slideIndex){
+					switch (slideIndex){
+						case 0:
+							return '<a href=""><img src="<%= image_path('img_thumb_hornet.png') %>" /></a>';
+						case 1:
+							return '<a href=""><img src="<%= image_path('img_thumb_cbr600.png') %>" /></a>';
+						case 2:
+							return '<a href=""><img src="<%= image_path('img_thumb_cbr1000.png') %>" /></a>';
+						case 3:
+							return '<a href=""><img src="<%= image_path('img_thumb_vfr.png') %>" /></a>';
+						case 4:
+							return '<a href=""><img src="<%= image_path('img_thumb_shadow.png') %>" /></a>';
+						case 5:
+							return '<a href=""><img src="<%= image_path('img_thumb_transalp.png') %>" /></a>';
+						case 6:
+							return '<a href=""><img src="<%= image_path('img_thumb_cb600f.png') %>" /></a>';
+						case 7:
+							return '<a href=""><img src="<%= image_path('img_thumb_cb1000r.png') %>" /></a>';
+						case 8:
+							return '<a href=""><img src="<%= image_path('img_thumb_goldwing.png') %>" /></a>';
+					}
+				}
+			});
+			
+			$('.box_lojas a').click(function(e) {
+				var src = "http://cbr1000rr.heroku.com/concessionarias";
+				$.modal('<iframe frameborder="0" bgcolor="#000000" border="0" src="' + src + '" height="450" width="830" style="border:0;background-color:#000;">', 
+				{
+					closeHTML:"<div style='color:#fff;text-align:right;'><img src='img/btn_close.png' style='cursor:pointer;'/></div>",
+					containerCss:{
+						backgroundColor:"#000",
+						borderColor:"#000",
+						marginTop:"-100px",
+						height:470,
+						padding:20,
+						width:830
+					},
+					onOpen: function (dialog) {
+						dialog.overlay.fadeIn('slow', function () {
+							dialog.data.hide();
+							dialog.container.fadeIn('slow', function () {
+								dialog.data.slideDown('slow');
+							});
+						});
+					},
+					onClose: function (dialog) {
+						dialog.data.slideUp('fast', function () {
+								dialog.container.hide('fast', function () {
+									dialog.overlay.fadeOut('fast', function () {
+										$.modal.close();
+									});
+								});
+							});
+						document.body.style.overflow="visible";
+					},
+					overlayClose:true
+				});
+			});
+		});
+	</script>
+	<!-- Date: 2011-08-06 -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-26028372-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>
+</html>

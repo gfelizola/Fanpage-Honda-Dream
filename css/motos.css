@@ -1,0 +1,13 @@
+.moto-slider { width:810px; padding-right:0px; margin-top:0px; padding-left:0px; background:#000 url('../img/bg_lineup_bike.png') no-repeat 0px 0px; }
+.moto-slider .bx-prev { position:absolute; top:140px; left:100px; width:31px; height:38px; text-indent:-99999999px; background:url("../img/img_lineup_left.png") no-repeat top left transparent; text-decoration:none; }
+.moto-slider .bx-next { position:absolute; top:140px; right:100px; width:31px; height:38px; text-indent:-99999999px; background:url('../img/img_lineup_right.png') no-repeat top left transparent; text-decoration:none; }
+#motos .box { position:relative; height:330px; }
+#motos .box img { padding-left:150px; width:500px; height:365px; }
+#motos label { color:red; font-size:18px; font-family:'Arial'; font-style:italic; font-weight:bold; }
+#motos .title { position:absolute; top:25px; left:576px; width:140px; }
+#motos .title .link { padding-left:10px; background:url('../img/icon_arrow.png') no-repeat 0px 2px; cursor:pointer; width:100px; z-index:999; }
+#motos .title .link a { text-decoration:none; font-size:13px; font-family:'Arial'; font-style:italic; font-weight:bold; color:#CCC; width:100px; z-index:999; }
+#motos img { position:absolute; }
+.bx-pager { margin-left:100px; }
+.bx-pager a { background-color:transparent; color:transparent; padding-left:2px; text-decoration:none; }
+.bx-pager img { height:78px; width:78px; }
