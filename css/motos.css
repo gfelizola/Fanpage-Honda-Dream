@@ -8,6 +8,6 @@
 #motos .title .link { padding-left:10px; background:url('../img/icon_arrow.png') no-repeat 0px 2px; cursor:pointer; width:100px; z-index:999; }
 #motos .title .link a { text-decoration:none; font-size:13px; font-family:'Arial'; font-style:italic; font-weight:bold; color:#CCC; width:100px; z-index:999; }
 #motos img { position:absolute; }
-.bx-pager { margin-left:100px; }
+.bx-pager { margin-left:70px; }
 .bx-pager a { background-color:transparent; color:transparent; padding-left:2px; text-decoration:none; }
 .bx-pager img { height:78px; width:78px; }

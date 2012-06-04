@@ -12,8 +12,20 @@
 	<script type="text/javascript" src="javascripts/jquery_ujs.js"></script>
 	<script type="text/javascript" src="javascripts/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="javascripts/jquery.bxSlider.min.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.simplemodal.1.4.2.min.js"></script>
-	
+	<!-- Date: 2011-08-06 -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-26028372-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </head>
 <body>
 	<div id="fb-root">
@@ -55,6 +67,16 @@
 							<label>CB 600F Hornet</label>
 							<div class="link">
 								<a href="https://www.honda.com.br/motos/Paginas/cb-600f-hornet.aspx" target="_blank">SAIBA MAIS</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<img  src="img/img_moto_cb600f.png" />
+						<div class="title">
+							<label>CB 600F</label>
+							<div class="link">
+								<a href="http://www.honda.com.br/motos/Paginas/cbr-600-f.aspx" target="_blank">SAIBA MAIS</a>
 							</div>
 						</div>
 					</div>
@@ -126,7 +148,7 @@
 		</div>
 	</div>
 	</div>
-	
+
 	<script type="text/javascript">
 		window.fbAsyncInit = function() {
 			FB.init({appId: '266437666723079', status: true, cookie: true, xfbml: true});
@@ -149,70 +171,24 @@
 						case 0:
 							return '<a href=""><img src="img/img_thumb_hornet.png" /></a>';
 						case 1:
-							return '<a href=""><img src="img/img_thumb_cbr600.png" /></a>';
+							return '<a href=""><img src="img/img_thumb_cb600f.png" /></a>';
 						case 2:
-							return '<a href=""><img src="img/img_thumb_cbr1000.png" /></a>';
+							return '<a href=""><img src="img/img_thumb_cbr600.png" /></a>';
 						case 3:
-							return '<a href=""><img src="img/img_thumb_vfr.png" /></a>';
+							return '<a href=""><img src="img/img_thumb_cbr1000.png" /></a>';
 						case 4:
-							return '<a href=""><img src="img/img_thumb_shadow.png" /></a>';
+							return '<a href=""><img src="img/img_thumb_vfr.png" /></a>';
 						case 5:
-							return '<a href=""><img src="img/img_thumb_transalp.png" /></a>';
+							return '<a href=""><img src="img/img_thumb_shadow.png" /></a>';
 						case 6:
+							return '<a href=""><img src="img/img_thumb_transalp.png" /></a>';
+						case 7:
 							return '<a href=""><img src="img/img_thumb_goldwing.png" /></a>';
 					}
 				}
 			});
-			
-			$('.box_lojas a').click(function(e) {
-				var src = "http://cbr1000rr.heroku.com/concessionarias";
-				$.modal('<iframe frameborder="0" bgcolor="#000000" border="0" src="' + src + '" height="450" width="830" style="border:0;background-color:#000;">', 
-				{
-					closeHTML:"<div style='color:#fff;text-align:right;'><img src='img/btn_close.png' style='cursor:pointer;'/></div>",
-					containerCss:{
-						backgroundColor:"#000",
-						borderColor:"#000",
-						marginTop:"-100px",
-						height:470,
-						padding:20,
-						width:830
-					},
-					onOpen: function (dialog) {
-						dialog.overlay.fadeIn('slow', function () {
-							dialog.data.hide();
-							dialog.container.fadeIn('slow', function () {
-								dialog.data.slideDown('slow');
-							});
-						});
-					},
-					onClose: function (dialog) {
-						dialog.data.slideUp('fast', function () {
-								dialog.container.hide('fast', function () {
-									dialog.overlay.fadeOut('fast', function () {
-										$.modal.close();
-									});
-								});
-							});
-						document.body.style.overflow="visible";
-					},
-					overlayClose:true
-				});
-			});
 		});
 	</script>
-	<!-- Date: 2011-08-06 -->
-	<script type="text/javascript">
 
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-26028372-1']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
 </body>
 </html>
